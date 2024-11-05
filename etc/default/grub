@@ -1,0 +1,29 @@
+# If you change this file, run 'update-grub' afterwards to update
+# # /boot/grub/grub.cfg.
+# # For full documentation of the options in this file, see:
+# #   info -f grub -n 'Simple configuration'
+
+GRUB_DEFAULT="0"
+GRUB_HIDDEN_TIMEOUT="0"  # Set to 0 to hide the menu immediately
+GRUB_HIDDEN_TIMEOUT_QUIET="true"
+
+GRUB_TIMEOUT="0"  # Set to 0 for immediate boot
+GRUB_TIMEOUT_STYLE="hidden"  # Hide the menu
+GRUB_FORCE_HIDDEN_MENU="true"  # Enable the hidden menu feature
+
+GRUB_DISTRIBUTOR="`lsb_release -i -s 2> /dev/null || echo Debian`"
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
+GRUB_CMDLINE_LINUX=""
+
+GRUB_DISABLE_OS_PROBER="false"
+
+# # Uncomment to disable graphical terminal
+# #GRUB_TERMINAL="console"
+
+# # The resolution used on graphical terminal
+GRUB_GFXMODE="1920x1080"
+
+export GRUB_COLOR_NORMAL="light-gray/black"
+export GRUB_COLOR_HIGHLIGHT="magenta/black"
+GRUB_THEME="/boot/grub/themes/debian/theme.txt"
+
