@@ -187,7 +187,7 @@ case $GRUB_DISTRIBUTOR in
 		fi
 		;;
 	*)
-		if set_background_image "/usr/share/images/desktop-base/desktop-grub.png"; then
+		if set_background_image "/boot/grub/Images/grub-16x9.png"; then
 			exit 0
 		fi
 		;;

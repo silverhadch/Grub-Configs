@@ -1,0 +1,13 @@
+# Reinstall Grub
+sudo apt-get purge grub-common grub-efi-amd64 grub-efi-amd64-bin grub-efi-amd64-signed grub-pc grub-pc-bin grub2-common
+sudo apt-get install grub-efi grub-common grub2-common
+
+# Monkey patch the byte offset from "Welcom to Grub!"
+root$ cat grubx64.efi | strings -t d | grep "Welcome to GRUB"
+
+      58322 Welcome to GRUB!
+
+# The value gets overwritten by 0 bytes
+echo -n -e "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00" | dd of=grubx64.efi bs=1 seek=58322 conv=notrunc
+
+# Pull my Github config and set it up.

@@ -24,7 +24,7 @@ ubuntu_recovery="0"
 quiet_boot="0"
 quick_boot="0"
 gfxpayload_dynamic="0"
-vt_handoff="0"
+vt_handoff="1"
 
 . "$pkgdatadir/grub-mkconfig_lib"
 
