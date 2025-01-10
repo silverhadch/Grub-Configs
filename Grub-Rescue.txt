@@ -11,3 +11,4 @@ root$ cat grubx64.efi | strings -t d | grep "Welcome to GRUB"
 echo -n -e "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00" | dd of=grubx64.efi bs=1 seek=58322 conv=notrunc
 
 # Pull my Github config and set it up.
+sudo sed -i 's/echo/#ech~o/g' /boot/grub/grub.cfg
